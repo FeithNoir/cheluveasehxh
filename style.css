@@ -1,0 +1,67 @@
+.gon-bg {
+    background: linear-gradient(
+      135deg,
+      #1e40af 0%,
+      #3b82f6 50%,
+      #93c5fd 100%
+    );
+  }
+
+  .killua-bg {
+    background: linear-gradient(
+      135deg,
+      #6b7280 0%,
+      #9ca3af 50%,
+      #d1d5db 100%
+    );
+  }
+
+  .hisoka-bg {
+    background: linear-gradient(
+      135deg,
+      #831843 0%,
+      #ec4899 50%,
+      #f9a8d4 100%
+    );
+  }
+
+  .meruem-bg {
+    background: linear-gradient(
+      135deg,
+      #065f46 0%,
+      #10b981 50%,
+      #6ee7b7 100%
+    );
+  }
+
+  .pulse {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .floating {
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
