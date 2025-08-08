@@ -1,17 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Calculate days since promise
-  const promiseDate = new Date("2021-01-01"); // Cambia esta fecha a cuando tu amigo prometió ver HxH
-  const today = new Date();
-  const timeDiff = today - promiseDate;
+  // Fecha en que se cumplió la promesa (¡hoy!)
+  const promiseFulfilledDate = new Date(); 
+  const promiseStartDate = new Date("2021-01-01"); // La fecha original de la promesa
+
+  const timeDiff = promiseFulfilledDate - promiseStartDate;
   const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
 
-  // Update counters
+  // Actualizar el contador con el total de días
   document.getElementById("days").textContent = daysDiff;
-  document.getElementById("days2").textContent = daysDiff;
 
-  // Animate numbers
+  // Animación para el número final
   function animateValue(id, start, end, duration) {
     const obj = document.getElementById(id);
+    if (!obj) return;
     let startTimestamp = null;
     const step = (timestamp) => {
       if (!startTimestamp) startTimestamp = timestamp;
@@ -25,5 +26,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   animateValue("days", 0, daysDiff, 2000);
-  animateValue("days2", 0, daysDiff, 2000);
 });
